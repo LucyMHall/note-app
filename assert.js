@@ -19,8 +19,5 @@ var assert = {
     } else {
       console.log("Passed: " + expected + " is not equal to " + actual)
     }
-  },
-  describe: function(description) {
-    console.log(description);
   }
 }
