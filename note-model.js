@@ -1,5 +1,6 @@
 (function(exports) {
-  function Note() {
+  function Note(text) {
+    this.text = text;
   };
   exports.Note = Note;
 })(this);
