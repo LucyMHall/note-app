@@ -19,5 +19,12 @@ var assert = {
     } else {
       console.log("Passed: " + expected + " is not equal to " + actual)
     }
+  },
+  includes: function(array, element) {
+    if (!(array.includes(element))) {
+      throw new Error("Failed " + array + " does not include " + element)
+    } else {
+      console.log("Passed: " + array + " does include " + element)
+    }
   }
 }
