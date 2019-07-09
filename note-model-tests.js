@@ -1,4 +1,4 @@
-console.log("Tests:");
+console.log("Note Tests:");
 
 (function(exports) {
 
