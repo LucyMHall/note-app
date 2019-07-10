@@ -34,7 +34,8 @@ console.log("Note-List-View Tests:");
     aNoteList.makeNote("Buy milk");
     aNoteList.makeNote("Buy bread");
     var noteListView = new NoteListView(aNoteList)
-    assert.isEqual("<ul><li><div>Buy milk</div></li>,<li><div>Buy bread</div></li></ul>", noteListView.displayNoteList())
+    var expectedHTML = "<ul><li><div>Buy milk</div></li>,<li><div>Buy bread</div></li></ul>"
+    assert.isEqual(expectedHTML, noteListView.displayNoteList())
   };
 
 
