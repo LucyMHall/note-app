@@ -27,7 +27,7 @@ console.log("Note Controller Tests:");
 
     var aNoteController = new NoteController(MockNoteList, MockNoteListView);
     aNoteController.display()
-    element = document.getElementById("app")
+    var element = document.getElementById("app")
     assert.includes("<ul><li><div>Favourite drink: seltzer</div></li></ul>", element.innerHTML)
   }
 
