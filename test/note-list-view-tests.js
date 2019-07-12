@@ -38,10 +38,22 @@ console.log("Note-List-View Tests:");
     assert.isEqual(expectedHTML, noteListView.displayNoteList())
   };
 
+  function test5() {
+    describe("only returns the first 20 characters of the note")
+    var aNoteList = new NoteList
+    aNoteList.makeNote("Yesterday all my troubles seemed so far away");
+    var noteListView = new NoteListView(aNoteList)
+    var numberOfHTMLCharacters = 29
+    var numberOfExpectedNoteCharacters = 20
+    var totalNumberOfExpectedCharacters = 49
+    assert.isEqual(49, noteListView.displayNoteList().length)
+  }
+
 
 
   test1();
   test2();
   test3();
   test4();
+  test5();
 })(this);

@@ -13,7 +13,7 @@
       var arrayOfHTML = []
 
       this.noteListContents.forEach(function(element) {
-        arrayOfHTML.push(`<li><div>${element.text}</div></li>`);
+        arrayOfHTML.push(`<li><div>${element.text.slice(0, 20)}</div></li>`);
       });
 
       return `<ul>${arrayOfHTML.join()}</ul>`
