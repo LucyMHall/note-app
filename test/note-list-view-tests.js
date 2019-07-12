@@ -25,7 +25,7 @@ console.log("Note-List-View Tests:");
     var aNoteList = new NoteList
     aNoteList.makeNote("Buy milk");
     var noteListView = new NoteListView(aNoteList)
-    assert.isEqual("<ul><li><div>Buy milk</div></li></ul>", noteListView.displayNoteList())
+    assert.isEqual("<ul><li><div><a href=`#notes/6`>Buy milk</a></div></li></ul>", noteListView.displayNoteList())
   };
 
   function test4() {
@@ -34,7 +34,7 @@ console.log("Note-List-View Tests:");
     aNoteList.makeNote("Buy milk");
     aNoteList.makeNote("Buy bread");
     var noteListView = new NoteListView(aNoteList)
-    var expectedHTML = "<ul><li><div>Buy milk</div></li>,<li><div>Buy bread</div></li></ul>"
+    var expectedHTML = "<ul><li><div><a href=`#notes/6`>Buy milk</a></div></li>,<li><div><a href=`#notes/7`>Buy bread</a></div></li></ul>"
     assert.isEqual(expectedHTML, noteListView.displayNoteList())
   };
 
@@ -43,10 +43,10 @@ console.log("Note-List-View Tests:");
     var aNoteList = new NoteList
     aNoteList.makeNote("Yesterday all my troubles seemed so far away");
     var noteListView = new NoteListView(aNoteList)
-    var numberOfHTMLCharacters = 29
+    var numberOfHTMLCharacters = 52
     var numberOfExpectedNoteCharacters = 20
-    var totalNumberOfExpectedCharacters = 49
-    assert.isEqual(49, noteListView.displayNoteList().length)
+    var totalNumberOfExpectedCharacters = 72
+    assert.isEqual(72, noteListView.displayNoteList().length)
   }
 
 
